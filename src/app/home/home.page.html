@@ -19,7 +19,25 @@
     <ion-button routerLink="/ciclo-vida">
       Ir a ciclo de vida
     </ion-button>
+    <ion-item *ngIf="gaSer.cargando">
+      <ion-label>Cargando usuarios...</ion-label>
+      <ion-spinner name="dots"></ion-spinner>
+    </ion-item>
+
     {{ gaSer.valor }}
+    <ion-list *ngFor="let user of gaSer.usuario">
+      
+      <ion-item>
+        Name: {{ user.name}}
+      </ion-item>
+      <ion-item>
+        User Name: {{ user.username }}
+      </ion-item>
+      <ion-item>
+        Lat: {{ user.address.geo.lat }}
+      </ion-item>
+    </ion-list>
+    <!-- {{ gaSer.usuario | json }} -->
     <!-- <ion-button (click) = "gaSer.aumentar()">+</ion-button>
     <ion-button (click) = "gaSer.disminuir()">-</ion-button> -->
   </div>
