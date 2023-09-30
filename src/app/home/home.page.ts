@@ -17,6 +17,7 @@ export class HomePage implements OnInit, OnDestroy, ViewWillEnter, ViewDidEnter,
     console.log("OnInit de Home");
   }
   ionViewWillEnter(): void {
+    this.gaSer.aumentar();
     console.log("ionViewWillEnter de Home");
   }
   ionViewDidEnter(): void {
