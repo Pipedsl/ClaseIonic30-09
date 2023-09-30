@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'ciclo-vida',
+    loadChildren: () => import('./ciclo-vida/ciclo-vida.module').then( m => m.CicloVidaPageModule)
+  },
 ];
 
 @NgModule({
