@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ViewWillEnter, ViewDidEnter, ViewWillLeave, ViewDidLeave } from '@ionic/angular'; //estas son interfaces
-
+import { GaleriaFotosService } from './../galeria-fotos.service'
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -8,7 +8,9 @@ import { ViewWillEnter, ViewDidEnter, ViewWillLeave, ViewDidLeave } from '@ionic
 })
 export class HomePage implements OnInit, OnDestroy, ViewWillEnter, ViewDidEnter, ViewWillLeave, ViewDidLeave {
   
-  constructor() {
+  constructor(
+    public gaSer: GaleriaFotosService
+  ) {
     console.log("constructor de Home");
   }
   ngOnInit(): void {

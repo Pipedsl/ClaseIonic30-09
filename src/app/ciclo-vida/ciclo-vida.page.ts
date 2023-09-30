@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { GaleriaFotosService } from './../galeria-fotos.service'
 
 
 @Component({
@@ -8,7 +9,9 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 })
 export class CicloVidaPage implements OnInit {
 
-  constructor() { 
+  constructor(
+    public gaSer : GaleriaFotosService
+  ) { 
     console.log("Constructor de Ciclo de vida")
   }
 
